@@ -1,0 +1,22 @@
+{
+    "bool": true,
+    "number": 114514,
+    "str": "test JSON",
+    "array": [3.14159, 2.71828, 0.618],
+    "err number": {
+        /* double的精度范围为e-380 ~ e+380 */
+        "too large": 114514e+400,       /* return 114514e+380，太大的会取精度范围内的最大值 */
+        "too small": 114514e-400,       /* return 0，太小的会直接取0 */
+        "too large int":  500000000000000000000   /* return 5e+20，超过int64范围的整型会用double来处理 */
+    },
+    "object": {
+        "name": "Qve",
+        "age": 1666,
+        "url": "https://www.httpbin.org",
+        "image extent": [480,240]
+    },
+    "config": {
+        /* 屏幕清除颜色 */
+        "clear color": [0.0, 0.0, 0.0, 1.0]
+    }
+}
